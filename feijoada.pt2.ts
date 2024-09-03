@@ -1,0 +1,37 @@
+type cooking = (componente:string) => void;
+let wit1: string = "Feijoada"
+    let wit2: string = "Verduras"
+         let pt3: string = "Arroz"
+const fazerfeij = (feigao: string) => {
+    
+    let ac1: string = " ("
+    let ingred1: string = "Feijão preto, "
+    let ingred2: string = "Carne suína "
+    let ingred3: string = "e Folha de louro)"
+    let pratocomp1: string = feigao + wit1 + ac1 + ingred1 + ingred2 + ingred3
+    console.log(pratocomp1)
+
+}
+const salad = (folha: string) => {
+   
+    let ac2: string = " ("
+    let leaf1: string = "Couve refogada, "
+    let leaf2: string = "Laranja "
+    let leaf3: string = "e Batata)"
+    let pratocomp2: string = folha + wit2 + ac2 + leaf1 + leaf2 + leaf3
+    console.log(pratocomp2)
+}
+
+//Por que ele não está printando o aloz? Era para aparecer Feijoada consiste em: Arroz
+//Vo colocar com console log msm. Sla. Mas eu vo anotar o código antigo
+function feijuca(callback: cooking): void {
+    let dicas: string = "Feijoada consiste em: "
+    callback(dicas)
+}
+feijuca(fazerfeij)
+feijuca(salad)
+console.log("Feijoada consiste em: Arroz")
+//Não consegui fazer ele juntar com o que eu queria. Talvez seja porque eu não criei uma variável específica? -Consegui, de certa forma
+//Não era bem o que eu esperava mas serviu. O estranho da função é que ela prende as variáveis, aí vc tem q colocar elas fora ou dentro. Must keep that in mind
+console.log(wit1,",", wit2,"e",pt3)
+//Esse código inteiro foi uma gambiarra gigante. I tried... -Ficou um pouco melhor
